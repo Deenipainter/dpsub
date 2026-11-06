@@ -1,0 +1,1486 @@
+{
+  "app": "dpsub",
+  "exportedAt": "2026-11-06T18:07:16.583Z",
+  "exportedBy": "dpsub24@gmail.com",
+  "schema": "public",
+  "tableCount": 14,
+  "totalRows": 101,
+  "tables": {
+    "AlrahuzSettings": {
+      "rowCount": 0,
+      "rows": []
+    },
+    "Announcement": {
+      "rowCount": 1,
+      "rows": [
+        {
+          "id": "welcome",
+          "title": "Welcome to DP Data Sub",
+          "body": "Buy data, airtime and more. Wallet funding and provider services go live once credentials are configured.",
+          "active": true,
+          "createdAt": "2026-11-04T22:11:06.156Z",
+          "updatedAt": "2026-11-04T22:11:06.156Z"
+        }
+      ]
+    },
+    "AuditEvent": {
+      "rowCount": 37,
+      "rows": [
+        {
+          "id": "cmw34laa10004vv5pznkofjt7",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "USER",
+          "action": "auth.register",
+          "entity": "User",
+          "entityId": "cmw34la4t0001vv5pqfbl6fkf",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "referredBy": null
+          },
+          "createdAt": "2026-11-05T05:49:14.953Z"
+        },
+        {
+          "id": "cmw34q5n9000cvv5pz56godox",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "SYSTEM",
+          "action": "auth.email_verified",
+          "entity": "User",
+          "entityId": "cmw34la4t0001vv5pqfbl6fkf",
+          "ip": null,
+          "metadata": null,
+          "createdAt": "2026-11-05T05:53:02.181Z"
+        },
+        {
+          "id": "cmw3c0ptd0001uq5rusu4ecop",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_settings_saved",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.157.248",
+          "metadata": {
+            "mode": "LIVE",
+            "liveApproved": true,
+            "secretKeyKind": "live",
+            "publicKeyUpdated": true,
+            "secretKeyUpdated": true,
+            "webhookSecretUpdated": true
+          },
+          "createdAt": "2026-11-05T09:17:12.241Z"
+        },
+        {
+          "id": "cmw3c0q7z0003uq5rv38gzywq",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_validated",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.157.248",
+          "metadata": {
+            "ok": true,
+            "mode": "LIVE",
+            "source": "saved"
+          },
+          "createdAt": "2026-11-05T09:17:12.767Z"
+        },
+        {
+          "id": "cmw3c56370005uq5r6808wb6m",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_settings_saved",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "mode": "LIVE",
+            "liveApproved": true,
+            "secretKeyKind": "live",
+            "publicKeyUpdated": false,
+            "secretKeyUpdated": false,
+            "webhookSecretUpdated": false
+          },
+          "createdAt": "2026-11-05T09:20:39.956Z"
+        },
+        {
+          "id": "cmw3c56fo0007uq5ri34huze2",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_validated",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "ok": true,
+            "mode": "LIVE",
+            "source": "saved"
+          },
+          "createdAt": "2026-11-05T09:20:40.404Z"
+        },
+        {
+          "id": "cmw3cd5z5000cuq5ryg82quya",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "auth.register",
+          "entity": "User",
+          "entityId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "ip": "10.8.157.248",
+          "metadata": {
+            "referredBy": null
+          },
+          "createdAt": "2026-11-05T09:26:53.058Z"
+        },
+        {
+          "id": "cmw3cdvuo000kuq5rbc4jm3jt",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cdvbp000iuq5rec25qclf",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CDVBO322K1W0B",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:27:26.592Z"
+        },
+        {
+          "id": "cmw3ce26g000ouq5r808idnok",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3ce1ow000muq5rc53wti61",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CE1OV6E2U1202",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:27:34.793Z"
+        },
+        {
+          "id": "cmw3ceec5000suq5rpuydlcxe",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cee06000quq5rvu9dtlib",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CEE056Q6S3N3I",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:27:50.549Z"
+        },
+        {
+          "id": "cmw3cetjy000wuq5r259fn7et",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cet74000uuq5rk9jkn9xf",
+          "ip": "10.8.6.241",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CET731E6R2X11",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:28:10.270Z"
+        },
+        {
+          "id": "cmw3cfopi0010uq5rlr91gt0e",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "SYSTEM",
+          "action": "auth.email_verified",
+          "entity": "User",
+          "entityId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "ip": null,
+          "metadata": null,
+          "createdAt": "2026-11-05T09:28:50.616Z"
+        },
+        {
+          "id": "cmw3cgbgj0014uq5rrwp0e6ox",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgaro0012uq5rw5qh1bp6",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGARN5E314U4W",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:20.131Z"
+        },
+        {
+          "id": "cmw3cghbe0018uq5rej5ftbhn",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgh060016uq5rp2e11zm4",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGH042C2L525R",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:27.722Z"
+        },
+        {
+          "id": "cmw3cgipp001cuq5rcup63q4d",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgig3001auq5rvmqajfrs",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGIG22H5Q0N2S",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:29.533Z"
+        },
+        {
+          "id": "cmw3cgjw9001guq5rb1qg3st1",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgjlr001euq5r6j0xmigu",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGJLP0Q4Q3H5C",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:31.066Z"
+        },
+        {
+          "id": "cmw3cgkyr001kuq5ronqz9jd0",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgkqu001iuq5rceg1zn4h",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGKQT2P0X186Y",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:32.451Z"
+        },
+        {
+          "id": "cmw3cgm7j001ouq5r3rcvgexg",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cglyy001muq5rdz0t8pnf",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGLYW3I610S08",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T09:29:34.064Z"
+        },
+        {
+          "id": "cmw3cguuu001suq5rmncwma56",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cguia001quq5rc8ccssg0",
+          "ip": "10.8.183.201",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGUI9505Z2F2V",
+            "amountKobo": 100000
+          },
+          "createdAt": "2026-11-05T09:29:45.270Z"
+        },
+        {
+          "id": "cmw3cgw4d001wuq5rt2yvh896",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cgvw0001uuq5r1c55z9ky",
+          "ip": "10.8.183.201",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3CGVVZ4D306Y4C",
+            "amountKobo": 100000
+          },
+          "createdAt": "2026-11-05T09:29:46.910Z"
+        },
+        {
+          "id": "cmw3cj43q0020uq5reoo8sqcn",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3cj3sd001yuq5rj0vpdnb3",
+          "ip": "10.8.0.1",
+          "metadata": {
+            "method": "any",
+            "channels": [],
+            "reference": "DPF-MW3CJ3SC2B5N6F07",
+            "amountKobo": 100000
+          },
+          "createdAt": "2026-11-05T09:31:30.566Z"
+        },
+        {
+          "id": "cmw3ckrjg0024uq5r4qvqla7e",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "auth.login",
+          "entity": "User",
+          "entityId": "cmw34la4t0001vv5pqfbl6fkf",
+          "ip": "10.8.0.1",
+          "metadata": null,
+          "createdAt": "2026-11-05T09:32:47.596Z"
+        },
+        {
+          "id": "cmw3cla150026uq5rn18rz2x7",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_settings_saved",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.157.248",
+          "metadata": {
+            "mode": "LIVE",
+            "liveApproved": true,
+            "secretKeyKind": "live",
+            "publicKeyUpdated": false,
+            "secretKeyUpdated": false,
+            "webhookSecretUpdated": false
+          },
+          "createdAt": "2026-11-05T09:33:11.561Z"
+        },
+        {
+          "id": "cmw3clace0028uq5rl52yb6nf",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "payment.gateway_validated",
+          "entity": "PaymentGatewaySettings",
+          "entityId": "paystack",
+          "ip": "10.8.157.248",
+          "metadata": {
+            "ok": true,
+            "mode": "LIVE",
+            "source": "saved"
+          },
+          "createdAt": "2026-11-05T09:33:11.966Z"
+        },
+        {
+          "id": "cmw3e1y4s0003ys5r7g1fhua2",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "auth.login",
+          "entity": "User",
+          "entityId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "ip": "10.8.189.86",
+          "metadata": null,
+          "createdAt": "2026-11-05T10:14:08.909Z"
+        },
+        {
+          "id": "cmw3e2hng0007ys5r0cq9jkoa",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2h820005ys5r7sx8ifgi",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2H816W1I2D42",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:34.204Z"
+        },
+        {
+          "id": "cmw3e2k09000bys5rjj409pcl",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2jqq0009ys5rqrf58opj",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2JQO160H1Q40",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:37.257Z"
+        },
+        {
+          "id": "cmw3e2lcs000fys5rlvnfbyry",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2kzg000dys5rd1cnm6ke",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2KZF54683W0O",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:39.004Z"
+        },
+        {
+          "id": "cmw3e2nez000jys5ru97tpkae",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2n5l000hys5rv0wazif6",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2N5K6B72376D",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:41.675Z"
+        },
+        {
+          "id": "cmw3e2pzu000nys5r6s78xceg",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2prs000lys5r6d6l1hcn",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2PRR0Q2C1X6Z",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:45.019Z"
+        },
+        {
+          "id": "cmw3e2v23000rys5rpiqev1au",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2uor000pys5rg1zza2jv",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2UOQ550Q0M0U",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:51.579Z"
+        },
+        {
+          "id": "cmw3e2zv6000vys5rvoazoynd",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e2zg4000tys5rb66unr2n",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E2ZG36S60675W",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:57.810Z"
+        },
+        {
+          "id": "cmw3e31c4000zys5r590ejn57",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3e30zx000xys5r1q62w2ed",
+          "ip": "10.8.189.86",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3E30ZV4C284V49",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:14:59.716Z"
+        },
+        {
+          "id": "cmw3emxf40013ys5r9zvpbq48",
+          "actorId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "actorRole": "USER",
+          "action": "wallet.funding_initialized",
+          "entity": "PaymentAttempt",
+          "entityId": "cmw3emx0g0011ys5rej1h2vvf",
+          "ip": "10.8.240.33",
+          "metadata": {
+            "method": "bank_transfer",
+            "channels": [
+              "bank_transfer"
+            ],
+            "reference": "DPF-MW3EMX0F643Q4V3W",
+            "amountKobo": 50000
+          },
+          "createdAt": "2026-11-05T10:30:27.760Z"
+        },
+        {
+          "id": "cmw5a77a80001w0ef0bd8134g",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "admin.data_export",
+          "entity": "Database",
+          "entityId": "public",
+          "ip": null,
+          "metadata": {
+            "totalRows": 98,
+            "tableCount": 14
+          },
+          "createdAt": "2026-11-06T18:01:47.936Z"
+        },
+        {
+          "id": "cmw5ac0db0005w0efhj2b66mo",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "auth.login",
+          "entity": "User",
+          "entityId": "cmw34la4t0001vv5pqfbl6fkf",
+          "ip": "10.8.189.86",
+          "metadata": null,
+          "createdAt": "2026-11-06T18:05:32.256Z"
+        },
+        {
+          "id": "cmw5ae6bh0007w0efx82uqim5",
+          "actorId": "cmw34la4t0001vv5pqfbl6fkf",
+          "actorRole": "ADMIN",
+          "action": "admin.data_export",
+          "entity": "Database",
+          "entityId": "public",
+          "ip": null,
+          "metadata": {
+            "totalRows": 100,
+            "tableCount": 14
+          },
+          "createdAt": "2026-11-06T18:07:13.277Z"
+        }
+      ]
+    },
+    "AuthToken": {
+      "rowCount": 4,
+      "rows": [
+        {
+          "id": "cmw34lacn0006vv5pl2ezws6u",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "tokenHash": "8ad5baf24e7fb8c6ba8a1ac832f6ffa049212ec4c92e3deb2012087e9e46fde3",
+          "purpose": "EMAIL_VERIFICATION",
+          "usedAt": null,
+          "expiresAt": "2026-11-06T05:49:15.046Z",
+          "createdAt": "2026-11-05T05:49:15.047Z"
+        },
+        {
+          "id": "cmw34o3uq000avv5pd36wrby8",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "tokenHash": "39def0db719766fb651d28aebfff6d044f0736256fb9986c6d8e8a2ecbd91c47",
+          "purpose": "EMAIL_VERIFICATION",
+          "usedAt": "2026-11-05T05:53:02.178Z",
+          "expiresAt": "2026-11-06T05:51:26.592Z",
+          "createdAt": "2026-11-05T05:51:26.594Z"
+        },
+        {
+          "id": "cmw3cd61p000euq5rmpai1saw",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "tokenHash": "24196d994930cd2714d0adfeb1f04ca40a22a5c7f29cef7d57d3597c0c36a787",
+          "purpose": "EMAIL_VERIFICATION",
+          "usedAt": null,
+          "expiresAt": "2026-11-06T09:26:53.148Z",
+          "createdAt": "2026-11-05T09:26:53.149Z"
+        },
+        {
+          "id": "cmw3cfg6b000yuq5rz5ysxj9h",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "tokenHash": "bbca773a0082ad1e2a8f8071edea7bed6add71a98fecac347cf54520db0129a8",
+          "purpose": "EMAIL_VERIFICATION",
+          "usedAt": "2026-11-05T09:28:50.613Z",
+          "expiresAt": "2026-11-06T09:28:39.586Z",
+          "createdAt": "2026-11-05T09:28:39.587Z"
+        }
+      ]
+    },
+    "DataPlan": {
+      "rowCount": 11,
+      "rows": [
+        {
+          "id": "cmw2o83go000gqd0wgqe1bdus",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-500MB-4D",
+          "name": "500 MB",
+          "sizeMb": 512,
+          "validity": "4–5 days",
+          "priceKobo": 24000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 10,
+          "createdAt": "2026-11-04T22:11:05.736Z",
+          "updatedAt": "2026-11-04T22:11:05.736Z"
+        },
+        {
+          "id": "cmw2o83ih000hqd0wp4c777um",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-500MB-7D",
+          "name": "500 MB",
+          "sizeMb": 512,
+          "validity": "7 days",
+          "priceKobo": 27000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 20,
+          "createdAt": "2026-11-04T22:11:05.801Z",
+          "updatedAt": "2026-11-04T22:11:05.801Z"
+        },
+        {
+          "id": "cmw2o83je000iqd0w5q6t02yy",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-1GB-7D",
+          "name": "1 GB",
+          "sizeMb": 1024,
+          "validity": "7 days",
+          "priceKobo": 39500,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 30,
+          "createdAt": "2026-11-04T22:11:05.834Z",
+          "updatedAt": "2026-11-04T22:11:05.834Z"
+        },
+        {
+          "id": "cmw2o83kb000jqd0w0gzqdenv",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-1GB-30D-A",
+          "name": "1 GB",
+          "sizeMb": 1024,
+          "validity": "20–30 days",
+          "priceKobo": 45000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 40,
+          "createdAt": "2026-11-04T22:11:05.867Z",
+          "updatedAt": "2026-11-04T22:11:05.867Z"
+        },
+        {
+          "id": "cmw2o83l8000kqd0w2dz63yo8",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-1GB-30D-B",
+          "name": "1 GB",
+          "sizeMb": 1024,
+          "validity": "21–30 days",
+          "priceKobo": 50000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 50,
+          "createdAt": "2026-11-04T22:11:05.900Z",
+          "updatedAt": "2026-11-04T22:11:05.900Z"
+        },
+        {
+          "id": "cmw2o83m5000lqd0wjg8pe4q4",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-2GB-30D",
+          "name": "2 GB",
+          "sizeMb": 2048,
+          "validity": "21–30 days",
+          "priceKobo": 80000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 60,
+          "createdAt": "2026-11-04T22:11:05.933Z",
+          "updatedAt": "2026-11-04T22:11:05.933Z"
+        },
+        {
+          "id": "cmw2o83n2000mqd0w8j1qqxn1",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-3GB-30D",
+          "name": "3 GB",
+          "sizeMb": 3072,
+          "validity": "21–30 days",
+          "priceKobo": 110000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 70,
+          "createdAt": "2026-11-04T22:11:05.966Z",
+          "updatedAt": "2026-11-04T22:11:05.966Z"
+        },
+        {
+          "id": "cmw2o83nz000nqd0ww94m5qr7",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-5GB-30D",
+          "name": "5 GB",
+          "sizeMb": 5120,
+          "validity": "21–30 days",
+          "priceKobo": 160000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 80,
+          "createdAt": "2026-11-04T22:11:05.999Z",
+          "updatedAt": "2026-11-04T22:11:05.999Z"
+        },
+        {
+          "id": "cmw2o83ow000oqd0w2dw2d7u2",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-10GB-30D",
+          "name": "10 GB (5 GB × 2)",
+          "sizeMb": 10240,
+          "validity": "21–30 days",
+          "priceKobo": 300000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 90,
+          "createdAt": "2026-11-04T22:11:06.033Z",
+          "updatedAt": "2026-11-04T22:11:06.033Z"
+        },
+        {
+          "id": "cmw2o83pv000pqd0w48re1nyc",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-15GB-30D",
+          "name": "15 GB (5 GB × 3)",
+          "sizeMb": 15360,
+          "validity": "21–30 days",
+          "priceKobo": 450000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 100,
+          "createdAt": "2026-11-04T22:11:06.068Z",
+          "updatedAt": "2026-11-04T22:11:06.068Z"
+        },
+        {
+          "id": "cmw2o83re000qqd0wjjtvhisy",
+          "network": "MTN",
+          "dataType": "SME",
+          "planCode": "REF-MTN-SME-20GB-30D",
+          "name": "20 GB (5 GB × 4)",
+          "sizeMb": 20480,
+          "validity": "21–30 days",
+          "priceKobo": 600000,
+          "costKobo": 0,
+          "source": "REFERENCE",
+          "active": true,
+          "sortOrder": 110,
+          "createdAt": "2026-11-04T22:11:06.122Z",
+          "updatedAt": "2026-11-04T22:11:06.122Z"
+        }
+      ]
+    },
+    "LedgerEntry": {
+      "rowCount": 0,
+      "rows": []
+    },
+    "PaymentAttempt": {
+      "rowCount": 22,
+      "rows": [
+        {
+          "id": "cmw3cdvbp000iuq5rec25qclf",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CDVBO322K1W0B",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/o1gw512hgqgqxq8",
+          "providerReference": "DPF-MW3CDVBO322K1W0B",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:27:25.909Z",
+          "updatedAt": "2026-11-05T09:27:26.527Z"
+        },
+        {
+          "id": "cmw3ce1ow000muq5rc53wti61",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CE1OV6E2U1202",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/yubrqa16tj3ze7f",
+          "providerReference": "DPF-MW3CE1OV6E2U1202",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:27:34.160Z",
+          "updatedAt": "2026-11-05T09:27:34.741Z"
+        },
+        {
+          "id": "cmw3cee06000quq5rvu9dtlib",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CEE056Q6S3N3I",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/c5b7kqif8s1rv34",
+          "providerReference": "DPF-MW3CEE056Q6S3N3I",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:27:50.119Z",
+          "updatedAt": "2026-11-05T09:27:50.517Z"
+        },
+        {
+          "id": "cmw3cet74000uuq5rk9jkn9xf",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CET731E6R2X11",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/e7qyb1lvwo65equ",
+          "providerReference": "DPF-MW3CET731E6R2X11",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:28:09.808Z",
+          "updatedAt": "2026-11-05T09:28:10.196Z"
+        },
+        {
+          "id": "cmw3cgaro0012uq5rw5qh1bp6",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGARN5E314U4W",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/zw20dir8ogumexe",
+          "providerReference": "DPF-MW3CGARN5E314U4W",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:19.236Z",
+          "updatedAt": "2026-11-05T09:29:20.067Z"
+        },
+        {
+          "id": "cmw3cgh060016uq5rp2e11zm4",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGH042C2L525R",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/rewp5jbtuppmg4b",
+          "providerReference": "DPF-MW3CGH042C2L525R",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:27.318Z",
+          "updatedAt": "2026-11-05T09:29:27.687Z"
+        },
+        {
+          "id": "cmw3cgig3001auq5rvmqajfrs",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGIG22H5Q0N2S",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/8zh8ilm8lri561u",
+          "providerReference": "DPF-MW3CGIG22H5Q0N2S",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:29.187Z",
+          "updatedAt": "2026-11-05T09:29:29.491Z"
+        },
+        {
+          "id": "cmw3cgjlr001euq5r6j0xmigu",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGJLP0Q4Q3H5C",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/mvmk4wzc6sw196m",
+          "providerReference": "DPF-MW3CGJLP0Q4Q3H5C",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:30.687Z",
+          "updatedAt": "2026-11-05T09:29:31.033Z"
+        },
+        {
+          "id": "cmw3cgkqu001iuq5rceg1zn4h",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGKQT2P0X186Y",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/hfbwgsteem1x68x",
+          "providerReference": "DPF-MW3CGKQT2P0X186Y",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:32.167Z",
+          "updatedAt": "2026-11-05T09:29:32.418Z"
+        },
+        {
+          "id": "cmw3cglyy001muq5rdz0t8pnf",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGLYW3I610S08",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/dnl5g5f2el2nxtj",
+          "providerReference": "DPF-MW3CGLYW3I610S08",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:33.754Z",
+          "updatedAt": "2026-11-05T09:29:34.031Z"
+        },
+        {
+          "id": "cmw3cguia001quq5rc8ccssg0",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGUI9505Z2F2V",
+          "amountKobo": 100000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/3tdjupr4djkt43t",
+          "providerReference": "DPF-MW3CGUI9505Z2F2V",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:44.819Z",
+          "updatedAt": "2026-11-05T09:29:45.217Z"
+        },
+        {
+          "id": "cmw3cgvw0001uuq5r1c55z9ky",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CGVVZ4D306Y4C",
+          "amountKobo": 100000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/egsz8c1urvp0w7h",
+          "providerReference": "DPF-MW3CGVVZ4D306Y4C",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:29:46.608Z",
+          "updatedAt": "2026-11-05T09:29:46.876Z"
+        },
+        {
+          "id": "cmw3cj3sd001yuq5rj0vpdnb3",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3CJ3SC2B5N6F07",
+          "amountKobo": 100000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": null,
+          "authorizationUrl": "https://checkout.paystack.com/p43y0k0a2atfn5q",
+          "providerReference": "DPF-MW3CJ3SC2B5N6F07",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T09:31:30.157Z",
+          "updatedAt": "2026-11-05T09:31:30.534Z"
+        },
+        {
+          "id": "cmw3e2h820005ys5r7sx8ifgi",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2H816W1I2D42",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/x9vrzxmih03feo2",
+          "providerReference": "DPF-MW3E2H816W1I2D42",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:33.650Z",
+          "updatedAt": "2026-11-05T10:14:34.124Z"
+        },
+        {
+          "id": "cmw3e2jqq0009ys5rqrf58opj",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2JQO160H1Q40",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/crjlj1ktceyte1a",
+          "providerReference": "DPF-MW3E2JQO160H1Q40",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:36.914Z",
+          "updatedAt": "2026-11-05T10:14:37.208Z"
+        },
+        {
+          "id": "cmw3e2kzg000dys5rd1cnm6ke",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2KZF54683W0O",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/2it2mv5ya9isyka",
+          "providerReference": "DPF-MW3E2KZF54683W0O",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:38.524Z",
+          "updatedAt": "2026-11-05T10:14:38.794Z"
+        },
+        {
+          "id": "cmw3e2n5l000hys5rv0wazif6",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2N5K6B72376D",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/1eclovd76v0d8ri",
+          "providerReference": "DPF-MW3E2N5K6B72376D",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:41.337Z",
+          "updatedAt": "2026-11-05T10:14:41.637Z"
+        },
+        {
+          "id": "cmw3e2prs000lys5r6d6l1hcn",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2PRR0Q2C1X6Z",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/a5exn0wcwoxomky",
+          "providerReference": "DPF-MW3E2PRR0Q2C1X6Z",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:44.728Z",
+          "updatedAt": "2026-11-05T10:14:44.980Z"
+        },
+        {
+          "id": "cmw3e2uor000pys5rg1zza2jv",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2UOQ550Q0M0U",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/84mw8liju2qddq0",
+          "providerReference": "DPF-MW3E2UOQ550Q0M0U",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:51.099Z",
+          "updatedAt": "2026-11-05T10:14:51.528Z"
+        },
+        {
+          "id": "cmw3e2zg4000tys5rb66unr2n",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E2ZG36S60675W",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/j0kvxov5zegzx0m",
+          "providerReference": "DPF-MW3E2ZG36S60675W",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:57.269Z",
+          "updatedAt": "2026-11-05T10:14:57.768Z"
+        },
+        {
+          "id": "cmw3e30zx000xys5r1q62w2ed",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3E30ZV4C284V49",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/9u4y0432kd9inbm",
+          "providerReference": "DPF-MW3E30ZV4C284V49",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:14:59.277Z",
+          "updatedAt": "2026-11-05T10:14:59.675Z"
+        },
+        {
+          "id": "cmw3emx0g0011ys5rej1h2vvf",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "reference": "DPF-MW3EMX0F643Q4V3W",
+          "amountKobo": 50000,
+          "provider": "paystack",
+          "status": "PENDING",
+          "requestedMethod": "bank_transfer",
+          "authorizationUrl": "https://checkout.paystack.com/iywaf1gkt6wtm4e",
+          "providerReference": "DPF-MW3EMX0F643Q4V3W",
+          "channel": null,
+          "failureReason": null,
+          "verifiedAt": null,
+          "createdAt": "2026-11-05T10:30:27.233Z",
+          "updatedAt": "2026-11-05T10:30:27.684Z"
+        }
+      ]
+    },
+    "PaymentGatewaySettings": {
+      "rowCount": 1,
+      "rows": [
+        {
+          "id": "paystack",
+          "provider": "paystack",
+          "secretKeyCipher": "v1.8a8fx7Y0AflxDw_7.HUwrrrpSdsoXoZOX5yWb6A.QrOWVkqISwvjK4K4qBTjP2fNDYI0rw843x0p47g2IT2Bz_CcrrVr1kw6eXvR0Tl6",
+          "publicKeyCipher": "v1.thOY2uWbNlObFv1i.3Qb1DAKhiTwV0NvIXZGMZQ.3ewIvVE2goB_qmhujnhel7OFHGqpTSjPJ6pvviACihI0W47D5OUMTut8yyvlnQ6m",
+          "webhookSecretCipher": "v1.uY2DDcVIl4EwbsWu.jxGrfRjsyA3ljocZqpO2bQ.Np0gpY-GDPY_jLdEKDbyyjkXthoEklcG_4q76LEnwEYB5HYKZnKG4VYTVDjoS8alnccIcsc0o21oJ_xRAxlR0zLYh7OW",
+          "secretKeyKind": "live",
+          "publicKeyKind": "live",
+          "mode": "LIVE",
+          "liveApprovedAt": "2026-11-05T09:33:11.497Z",
+          "liveApprovedById": "cmw34la4t0001vv5pqfbl6fkf",
+          "lastValidatedAt": "2026-11-05T09:33:11.654Z",
+          "lastValidatedOk": true,
+          "lastValidationMessage": "Paystack accepted the live credentials. Balances are readable for NGN.",
+          "updatedById": "cmw34la4t0001vv5pqfbl6fkf",
+          "createdAt": "2026-11-05T09:17:12.178Z",
+          "updatedAt": "2026-11-05T09:33:11.905Z"
+        }
+      ]
+    },
+    "Referral": {
+      "rowCount": 0,
+      "rows": []
+    },
+    "ServiceAvailability": {
+      "rowCount": 16,
+      "rows": [
+        {
+          "id": "cmw2o82zw0000qd0wzwnmv3ps",
+          "key": "data",
+          "name": "Data",
+          "status": "PROVIDER_CONFIG_REQUIRED",
+          "createdAt": "2026-11-04T22:11:05.133Z",
+          "updatedAt": "2026-11-04T22:11:05.133Z"
+        },
+        {
+          "id": "cmw2o832j0001qd0wrxgho3o4",
+          "key": "airtime",
+          "name": "Airtime",
+          "status": "PROVIDER_CONFIG_REQUIRED",
+          "createdAt": "2026-11-04T22:11:05.227Z",
+          "updatedAt": "2026-11-04T22:11:05.227Z"
+        },
+        {
+          "id": "cmw2o833n0002qd0wrcvl7t3q",
+          "key": "cable",
+          "name": "Cable TV",
+          "status": "PROVIDER_CONFIG_REQUIRED",
+          "createdAt": "2026-11-04T22:11:05.267Z",
+          "updatedAt": "2026-11-04T22:11:05.267Z"
+        },
+        {
+          "id": "cmw2o834j0003qd0wdryhn8ca",
+          "key": "electricity",
+          "name": "Electricity",
+          "status": "PROVIDER_CONFIG_REQUIRED",
+          "createdAt": "2026-11-04T22:11:05.299Z",
+          "updatedAt": "2026-11-04T22:11:05.299Z"
+        },
+        {
+          "id": "cmw2o835m0004qd0wcncrtm56",
+          "key": "data-card",
+          "name": "Data Card",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.339Z",
+          "updatedAt": "2026-11-04T22:11:05.339Z"
+        },
+        {
+          "id": "cmw2o836j0005qd0w19n6btpe",
+          "key": "bonus-to-wallet",
+          "name": "Bonus to Wallet",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.371Z",
+          "updatedAt": "2026-11-04T22:11:05.371Z"
+        },
+        {
+          "id": "cmw2o837f0006qd0w9l4iawow",
+          "key": "recharge-to-cash",
+          "name": "Recharge to Cash",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.403Z",
+          "updatedAt": "2026-11-04T22:11:05.403Z"
+        },
+        {
+          "id": "cmw2o838b0007qd0wrgfcqeii",
+          "key": "recharge-pin",
+          "name": "Recharge PIN",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.435Z",
+          "updatedAt": "2026-11-04T22:11:05.435Z"
+        },
+        {
+          "id": "cmw2o83970008qd0wiwdu17e2",
+          "key": "education-pin",
+          "name": "Education PIN",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.468Z",
+          "updatedAt": "2026-11-04T22:11:05.468Z"
+        },
+        {
+          "id": "cmw2o83a30009qd0wm76uaacy",
+          "key": "affiliate",
+          "name": "Affiliate Website",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.499Z",
+          "updatedAt": "2026-11-04T22:11:05.499Z"
+        },
+        {
+          "id": "cmw2o83b8000aqd0wh0mjizac",
+          "key": "referrals",
+          "name": "My Referrals",
+          "status": "ENABLED",
+          "createdAt": "2026-11-04T22:11:05.540Z",
+          "updatedAt": "2026-11-04T22:11:05.540Z"
+        },
+        {
+          "id": "cmw2o83c5000bqd0wl6ecsd3u",
+          "key": "more",
+          "name": "More Services",
+          "status": "ENABLED",
+          "createdAt": "2026-11-04T22:11:05.573Z",
+          "updatedAt": "2026-11-04T22:11:05.573Z"
+        },
+        {
+          "id": "cmw2o83d2000cqd0w9oyr9fbm",
+          "key": "cac",
+          "name": "CAC Services",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.607Z",
+          "updatedAt": "2026-11-04T22:11:05.607Z"
+        },
+        {
+          "id": "cmw2o83e0000dqd0wqpwqv437",
+          "key": "nin",
+          "name": "NIN Services",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.640Z",
+          "updatedAt": "2026-11-04T22:11:05.640Z"
+        },
+        {
+          "id": "cmw2o83ew000eqd0wfed5cspm",
+          "key": "bvn",
+          "name": "BVN Services",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.673Z",
+          "updatedAt": "2026-11-04T22:11:05.673Z"
+        },
+        {
+          "id": "cmw2o83fs000fqd0wg7zso7m9",
+          "key": "crypto",
+          "name": "Crypto Services",
+          "status": "COMING_SOON",
+          "createdAt": "2026-11-04T22:11:05.704Z",
+          "updatedAt": "2026-11-04T22:11:05.704Z"
+        }
+      ]
+    },
+    "Session": {
+      "rowCount": 5,
+      "rows": [
+        {
+          "id": "cmw34laef0008vv5p3t8kwg1p",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "tokenHash": "b771ca43a526ae59e0897b59f8378a9fff32e7d8615547420679924422dc1fed",
+          "expiresAt": "2026-11-19T05:49:15.110Z",
+          "revokedAt": "2026-11-05T09:24:20.391Z",
+          "userAgent": "Mozilla/5.0 (Android 16; Mobile; rv:157.0) Gecko/157.0 Firefox/157.0",
+          "ip": "10.8.240.33",
+          "createdAt": "2026-11-05T05:49:15.112Z"
+        },
+        {
+          "id": "cmw3cd63h000guq5r3a6fmu7u",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "tokenHash": "5494502e98558db0499ca7bc3296f6957289539b3a7f006f7cde8540c7df7927",
+          "expiresAt": "2026-11-19T09:26:53.212Z",
+          "revokedAt": "2026-11-05T09:32:22.159Z",
+          "userAgent": "Mozilla/5.0 (Android 16; Mobile; rv:157.0) Gecko/157.0 Firefox/157.0",
+          "ip": "10.8.157.248",
+          "createdAt": "2026-11-05T09:26:53.213Z"
+        },
+        {
+          "id": "cmw3ckrhn0022uq5r8xth97m3",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "tokenHash": "47b0214c46856efac5d66bb0457b7252a2fa08bfa04e8698470ca028c09cafeb",
+          "expiresAt": "2026-11-19T09:32:47.529Z",
+          "revokedAt": "2026-11-05T10:13:38.119Z",
+          "userAgent": "Mozilla/5.0 (Android 16; Mobile; rv:157.0) Gecko/157.0 Firefox/157.0",
+          "ip": "10.8.0.1",
+          "createdAt": "2026-11-05T09:32:47.531Z"
+        },
+        {
+          "id": "cmw3e1y2o0001ys5r7mn478tx",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "tokenHash": "0047a249ec25d27f753b98bce55b8eadbf4f3794d8574ba51bc7fcf1caca8852",
+          "expiresAt": "2026-11-19T10:14:08.830Z",
+          "revokedAt": null,
+          "userAgent": "Mozilla/5.0 (Android 16; Mobile; rv:157.0) Gecko/157.0 Firefox/157.0",
+          "ip": "10.8.189.86",
+          "createdAt": "2026-11-05T10:14:08.832Z"
+        },
+        {
+          "id": "cmw5ac0au0003w0efi817dbgo",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "tokenHash": "6144096c688405624c01b40c529acc7ca3cb1367eccfd02c40968b17451cc463",
+          "expiresAt": "2026-11-20T18:05:32.165Z",
+          "revokedAt": null,
+          "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Mobile Safari/537.36",
+          "ip": "10.8.189.86",
+          "createdAt": "2026-11-06T18:05:32.166Z"
+        }
+      ]
+    },
+    "User": {
+      "rowCount": 2,
+      "rows": [
+        {
+          "id": "cmw34la4t0001vv5pqfbl6fkf",
+          "fullName": "Dini Yusuf",
+          "email": "dpsub24@gmail.com",
+          "phone": "07069343217",
+          "passwordHash": "$2b$10$TT0Z3iS9wuusWd3v0D0mxuxJ4jvotEY5VHZgaLScyeDkDxpbCxLi2",
+          "role": "ADMIN",
+          "emailVerifiedAt": "2026-11-05T05:53:02.178Z",
+          "referralCode": "DINI3A2E24",
+          "referredById": null,
+          "createdAt": "2026-11-05T05:49:14.765Z",
+          "updatedAt": "2026-11-05T05:56:34.439Z"
+        },
+        {
+          "id": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "fullName": "Dini Yusuf",
+          "email": "deeniyusuf24@gmail.com",
+          "phone": "07066006087",
+          "passwordHash": "$2b$10$U2Vkzs1V.I5twsaiFdX13OqNbDXCHtihy8d01ZVM7yyWhuTbnm4zm",
+          "role": "USER",
+          "emailVerifiedAt": "2026-11-05T09:28:50.613Z",
+          "referralCode": "DINIDDBFBE",
+          "referredById": null,
+          "createdAt": "2026-11-05T09:26:52.865Z",
+          "updatedAt": "2026-11-05T09:28:50.616Z"
+        }
+      ]
+    },
+    "VtuOrder": {
+      "rowCount": 0,
+      "rows": []
+    },
+    "Wallet": {
+      "rowCount": 2,
+      "rows": [
+        {
+          "id": "cmw34la4t0002vv5pb0l416c6",
+          "userId": "cmw34la4t0001vv5pqfbl6fkf",
+          "balanceKobo": 0,
+          "createdAt": "2026-11-05T05:49:14.765Z",
+          "updatedAt": "2026-11-05T05:49:14.765Z"
+        },
+        {
+          "id": "cmw3cd5tt000auq5rlz74cxxc",
+          "userId": "cmw3cd5tt0009uq5r1hmmfc3k",
+          "balanceKobo": 0,
+          "createdAt": "2026-11-05T09:26:52.865Z",
+          "updatedAt": "2026-11-05T09:26:52.865Z"
+        }
+      ]
+    }
+  }
+}
