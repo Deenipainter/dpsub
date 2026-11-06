@@ -1,0 +1,307 @@
+// Dpsub — Prisma schema (reconstructed from source code).
+// Money is always integer kobo. The ledger is append-only; wallet.balanceKobo
+// is a derived cache written only inside serialisable transactions.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum LedgerDirection {
+  CREDIT
+  DEBIT
+}
+
+enum LedgerType {
+  FUNDING
+  PURCHASE
+  REFUND
+  REFERRAL_REWARD
+  ADMIN_ADJUSTMENT
+}
+
+enum ServiceStatus {
+  ENABLED
+  PROVIDER_CONFIG_REQUIRED
+  COMING_SOON
+}
+
+enum OrderStatus {
+  PENDING
+  SUCCESSFUL
+  FAILED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESSFUL
+  FAILED
+}
+
+enum DataPlanSource {
+  REFERENCE
+  PROVIDER
+}
+
+enum AuthTokenPurpose {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
+}
+
+model User {
+  id             String    @id @default(cuid())
+  fullName       String
+  email          String    @unique
+  phone          String    @unique
+  passwordHash   String
+  role           Role      @default(USER)
+  emailVerifiedAt DateTime?
+  referralCode   String    @unique
+  referredById   String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  referredBy       User?            @relation("ReferralTree", fields: [referredById], references: [id])
+  referredUsers    User[]           @relation("ReferralTree")
+  wallet           Wallet?
+  sessions         Session[]
+  authTokens       AuthToken[]
+  vtuOrders        VtuOrder[]
+  paymentAttempts  PaymentAttempt[]
+  ledgerEntries    LedgerEntry[]
+  referralsMade    Referral[]       @relation("ReferralReferrer")
+  referralsReceived Referral[]      @relation("ReferralReferee")
+  auditEvents      AuditEvent[]
+}
+
+model Session {
+  id        String    @id @default(cuid())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  revokedAt DateTime?
+  userAgent String?
+  ip        String?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AuthToken {
+  id        String          @id @default(cuid())
+  userId    String
+  tokenHash String          @unique
+  purpose   AuthTokenPurpose
+  usedAt    DateTime?
+  expiresAt DateTime
+  createdAt DateTime        @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Wallet {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  balanceKobo Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ledgerEntries LedgerEntry[]
+}
+
+model LedgerEntry {
+  id               String         @id @default(cuid())
+  walletId         String
+  userId           String
+  direction        LedgerDirection
+  type             LedgerType
+  amountKobo       Int
+  balanceAfterKobo Int
+  reference        String         @unique
+  narration        String
+  orderId          String?
+  paymentId        String?
+  metadata         Json?
+  createdAt        DateTime       @default(now())
+
+  wallet  Wallet          @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  user    User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  order   VtuOrder?       @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  payment PaymentAttempt? @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([walletId])
+}
+
+model VtuOrder {
+  id                String      @id @default(cuid())
+  userId            String
+  reference         String      @unique
+  idempotencyKey    String      @unique
+  serviceType       String
+  network           String
+  dataType          String?
+  planCode          String
+  planName          String
+  recipient         String
+  amountKobo        Int
+  costKobo          Int?
+  status            OrderStatus @default(PENDING)
+  providerName      String
+  providerReference String?
+  providerStatus    String?
+  providerMessage   String?
+  failureReason     String?
+  refundedAt        DateTime?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ledgerEntries LedgerEntry[]
+
+  @@index([userId, createdAt])
+}
+
+model DataPlan {
+  id        String         @id @default(cuid())
+  network   String
+  dataType  String
+  planCode  String
+  name      String
+  sizeMb    Int
+  validity  String
+  priceKobo Int
+  costKobo  Int?
+  source    DataPlanSource
+  active    Boolean        @default(true)
+  sortOrder Int            @default(0)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+
+  @@unique([network, dataType, planCode])
+  @@index([network, dataType, active])
+}
+
+model PaymentAttempt {
+  id                String        @id @default(cuid())
+  userId            String
+  reference         String        @unique
+  amountKobo        Int
+  provider          String
+  status            PaymentStatus @default(PENDING)
+  requestedMethod   String?
+  authorizationUrl  String?
+  providerReference String?
+  channel           String?
+  failureReason     String?
+  verifiedAt        DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ledgerEntries LedgerEntry[]
+
+  @@index([userId, createdAt])
+}
+
+model Referral {
+  id              String    @id @default(cuid())
+  referrerId      String
+  refereeId       String    @unique
+  code            String
+  qualifiedAt     DateTime?
+  rewardKobo      Int       @default(0)
+  rewardClaimedAt DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  referrer User @relation("ReferralReferrer", fields: [referrerId], references: [id], onDelete: Cascade)
+  referee  User @relation("ReferralReferee", fields: [refereeId], references: [id], onDelete: Cascade)
+
+  @@index([referrerId, createdAt])
+}
+
+model ServiceAvailability {
+  id        String        @id @default(cuid())
+  key       String        @unique
+  name      String
+  status    ServiceStatus
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  title     String
+  body      String
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AuditEvent {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actorRole String   @default("SYSTEM")
+  action    String
+  entity    String?
+  entityId  String?
+  ip        String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  actor User? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([entity, entityId])
+}
+
+model AlrahuzSettings {
+  id                    String    @id
+  provider              String    @default("alrahuz")
+  apiKeyCipher          String?
+  baseUrl               String?
+  authScheme            String    @default("Token")
+  checkPath             String?
+  lastValidatedAt       DateTime?
+  lastValidatedOk       Boolean?
+  lastValidationState   String?
+  lastValidationMessage String?
+  updatedById           String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+}
+
+model PaymentGatewaySettings {
+  id                    String    @id
+  provider              String    @default("paystack")
+  secretKeyCipher       String?
+  publicKeyCipher       String?
+  webhookSecretCipher   String?
+  secretKeyKind         String?
+  publicKeyKind         String?
+  mode                  String    @default("TEST")
+  liveApprovedAt        DateTime?
+  liveApprovedById      String?
+  lastValidatedAt       DateTime?
+  lastValidatedOk       Boolean?
+  lastValidationMessage String?
+  updatedById           String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+}

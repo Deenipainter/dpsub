@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A8F66"/>
+      <stop offset="1" stop-color="#06664A"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="19" fill="url(#g)"/>
+  <circle cx="50" cy="13" r="13" fill="rgba(34,197,94,0.55)"/>
+  <text x="32" y="43" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="-1">DP</text>
+</svg>
